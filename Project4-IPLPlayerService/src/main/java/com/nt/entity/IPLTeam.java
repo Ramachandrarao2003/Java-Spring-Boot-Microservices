@@ -19,7 +19,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @RequiredArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor   //this is also taken u r not taking comming error
 public class IPLTeam implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
