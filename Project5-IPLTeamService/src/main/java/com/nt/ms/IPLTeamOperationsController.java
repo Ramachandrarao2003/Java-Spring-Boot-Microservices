@@ -59,7 +59,7 @@ public class IPLTeamOperationsController {
 		}
 	}//method
 	
-	@GetMapping("/find/{id}")
+	@GetMapping("/find/{id}") //this is id mesns team id value
 	public ResponseEntity<?> showTeamById(@PathVariable int id){
 		try {
 			//use service
