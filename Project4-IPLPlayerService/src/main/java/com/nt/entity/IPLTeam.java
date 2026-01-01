@@ -8,15 +8,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name="IPL_TEAM_INFO")
-@Data
+@Setter
+@Getter
 @RequiredArgsConstructor
-
+@AllArgsConstructor
 public class IPLTeam implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

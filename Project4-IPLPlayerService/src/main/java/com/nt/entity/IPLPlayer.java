@@ -13,13 +13,15 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name="IPL_PLAYER_INFO")
-@Data
+@Setter
+@Getter
 @RequiredArgsConstructor
 public class IPLPlayer implements Serializable {
 	@Id
@@ -33,9 +35,9 @@ public class IPLPlayer implements Serializable {
 	@NonNull
 	private String role;
 	
-	@NonNull
+	
 	@ManyToOne(targetEntity = IPLTeam.class,cascade=CascadeType.MERGE,fetch = FetchType.EAGER)
-	@JoinColumn(name="t_id",referencedColumnName = "teamId")//For FK column
+	@JoinColumn(name="t_id",referencedColumnName = "teamid")//For FK column
 	private IPLTeam team;
 	
 	public IPLPlayer() {
